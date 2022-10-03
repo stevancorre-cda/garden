@@ -1,7 +1,13 @@
 @import "scss-reset/reset";
 
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/regular";
+
 @import "styles/theme";
 @import "styles/index";
 
 @import "styles/header";
 @import "styles/hero";
+@import "styles/content";
