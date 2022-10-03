@@ -1,0 +1,33 @@
+{
+    "name": "garden",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": "Stévan Corre <stevancorre@protonmail.com> (https://stevancorre.com)",
+    "scripts": {
+        "build": "npm run lint && NODE_ENV=production webpack --config webpack.prod.mjs",
+        "dev": "webpack serve --open --config webpack.dev.mjs",
+        "preinstall": "npx only-allow pnpm",
+        "lint": "stylelint src --fix --cache && prettier .*rc *.json --write --cache"
+    },
+    "devDependencies": {
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^11.0.0",
+        "css-loader": "^6.7.1",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.6.1",
+        "postcss": "^8.4.17",
+        "prettier": "^2.7.1",
+        "sass": "^1.55.0",
+        "sass-loader": "^13.0.2",
+        "style-loader": "^3.3.1",
+        "stylelint": "^14.13.0",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-standard-scss": "^5.0.0",
+        "stylelint-prettier": "^2.0.0",
+        "stylelint-webpack-plugin": "^3.3.0",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.11.1",
+        "webpack-merge": "^5.8.0"
+    }
+}

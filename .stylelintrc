@@ -1,0 +1,17 @@
+{
+    "extends": ["stylelint-config-standard-scss", "stylelint-prettier/recommended"],
+    "rules": {
+        "indentation": [
+            4,
+            {
+                "baseIndentLevel": 1
+            }
+        ],
+        "declaration-empty-line-before": [
+            "never",
+            {
+                "ignore": ["after-comment", "after-declaration"]
+            }
+        ]
+    }
+}
