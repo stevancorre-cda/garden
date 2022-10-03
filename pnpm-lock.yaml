@@ -11,6 +11,7 @@ specifiers:
   prettier: ^2.7.1
   sass: ^1.55.0
   sass-loader: ^13.0.2
+  scss-reset: ^1.2.2
   style-loader: ^3.3.1
   stylelint: ^14.13.0
   stylelint-config-prettier: ^9.0.3
@@ -22,6 +23,9 @@ specifiers:
   webpack-cli: ^4.10.0
   webpack-dev-server: ^4.11.1
   webpack-merge: ^5.8.0
+
+dependencies:
+  scss-reset: 1.2.2
 
 devDependencies:
   clean-webpack-plugin: 4.0.0_webpack@5.74.0
@@ -2705,6 +2709,10 @@ packages:
       ajv-formats: 2.1.1
       ajv-keywords: 5.1.0_ajv@8.11.0
     dev: true
+
+  /scss-reset/1.2.2:
+    resolution: {integrity: sha512-y3QLhXQCiwS5YxYSl4nGQkyIvaCtMm6O8V7clVrIihWQGOEv1IpEpLGpcOWOasizc+DEEMyge1Peu0BCmeu/bg==}
+    dev: false
 
   /select-hose/2.0.0:
     resolution: {integrity: sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg==}
