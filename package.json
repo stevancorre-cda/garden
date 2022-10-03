@@ -7,7 +7,7 @@
         "build": "npm run lint && NODE_ENV=production webpack --config webpack.prod.mjs",
         "dev": "webpack serve --open --config webpack.dev.mjs",
         "preinstall": "npx only-allow pnpm",
-        "lint": "stylelint src/**/*.scss src/*.scss --fix --cache && prettier .*rc *.json --write --cache"
+        "lint": "eslint . --ext ts,mjs --fix --cache && stylelint **/*.scss --fix --cache && prettier .*rc *.json --write --cache"
     },
     "devDependencies": {
         "clean-webpack-plugin": "^4.0.0",
@@ -39,6 +39,17 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.2.0",
-        "scss-reset": "^1.2.2"
+        "@typescript-eslint/eslint-plugin": "^5.38.1",
+        "@typescript-eslint/parser": "^5.38.1",
+        "eslint": "^8.24.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-simple-import-sort": "^8.0.0",
+        "eslint-webpack-plugin": "^3.2.0",
+        "fork-ts-checker-webpack-plugin": "^7.2.13",
+        "scss-reset": "^1.2.2",
+        "tiny-slider": "^2.9.4",
+        "ts-loader": "^9.4.1",
+        "typescript": "^4.8.4"
     }
 }
