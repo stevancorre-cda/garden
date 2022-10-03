@@ -1,0 +1,83 @@
+#presentation {
+    display: flex;
+    gap: 2rem;
+
+    div:nth-child(2) {
+        width: 55%;
+    }
+
+    &-title {
+        font-family: "Megan June", sans-serif;
+
+        text-transform: uppercase;
+
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    &-text {
+        position: relative;
+
+        padding-top: 4rem;
+        margin: 1rem 0;
+
+        font-family: Cabin, sans-serif;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 3rem;
+            height: 0.15rem;
+
+            background: $secondary;
+        }
+    }
+
+    &-image {
+        width: 90%;
+    }
+
+    &-keywords {
+        font-family: "Megan June", sans-serif;
+
+        margin-top: 2rem;
+
+        width: 70%;
+        column-count: 2;
+
+        font-size: 1.5rem;
+
+        i {
+            color: $primary;
+            margin-right: 0.5rem;
+        }
+    }
+
+    &-button {
+        margin-top: 2rem;
+
+        display: block;
+
+        padding: 0.4rem;
+
+        width: fit-content;
+
+        background: $primary;
+        color: #fff;
+        border-radius: 0.5rem;
+
+        text-decoration: none;
+
+        &:hover {
+            filter: brightness(110%);
+        }
+
+        &:active {
+            filter: brightness(105%);
+        }
+    }
+}
