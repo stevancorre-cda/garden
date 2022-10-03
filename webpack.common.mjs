@@ -1,5 +1,5 @@
+import ImageMinimizerPlugin from "image-minimizer-webpack-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
-import CopyPlugin from "copy-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "path";
@@ -33,11 +33,23 @@ export default {
                 ],
             },
             {
-                test: /\.(woff|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+                test: /\.(woff|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/i,
                 use: {
-                  loader: "url-loader",
+                    loader: "url-loader",
                 },
-              }
+            },
+            {
+                test: /\.(png|jpe?g|webp|git|svg|)$/i,
+                type: "asset/resource",
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: "html-loader"
+                    }
+                ]
+            }
         ],
     },
     plugins: [
@@ -47,16 +59,33 @@ export default {
         }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: "./public/index.html",
-            favicon: "./public/favicon.ico",
+            template: "./src/index.html",
+            favicon: "./src/assets/images/favicon.ico",
             inject: true,
-        }),
-        new CopyPlugin({
-            patterns: [{ from: "./public/favicon.ico", to: "." }],
         }),
         new StylelintPlugin({
             extensions: "scss",
             fix: true,
-        })
+        }),
+        new ImageMinimizerPlugin({
+            minimizer: {
+                implementation: ImageMinimizerPlugin.imageminMinify,
+                options: {
+                    plugins: [
+                        "imagemin-mozjpeg",
+                        "imagemin-pngquant",
+                    ],
+                },
+            },
+            generator: [
+                {
+                    preset: "webp",
+                    implementation: ImageMinimizerPlugin.imageminGenerate,
+                    options: {
+                        plugins: ["imagemin-webp"],
+                    },
+                },
+            ],
+        }),
     ],
 };
