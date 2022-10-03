@@ -7,12 +7,13 @@
         "build": "npm run lint && NODE_ENV=production webpack --config webpack.prod.mjs",
         "dev": "webpack serve --open --config webpack.dev.mjs",
         "preinstall": "npx only-allow pnpm",
-        "lint": "stylelint src --fix --cache && prettier .*rc *.json --write --cache"
+        "lint": "stylelint src/**/*.scss src/*.scss --fix --cache && prettier .*rc *.json --write --cache"
     },
     "devDependencies": {
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.7.1",
+        "file-loader": "^6.2.0",
         "html-webpack-plugin": "^5.5.0",
         "mini-css-extract-plugin": "^2.6.1",
         "postcss": "^8.4.17",
@@ -25,6 +26,7 @@
         "stylelint-config-standard-scss": "^5.0.0",
         "stylelint-prettier": "^2.0.0",
         "stylelint-webpack-plugin": "^3.3.0",
+        "url-loader": "^4.1.1",
         "webpack": "^5.74.0",
         "webpack-cli": "^4.10.0",
         "webpack-dev-server": "^4.11.1",

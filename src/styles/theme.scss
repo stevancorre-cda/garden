@@ -1,1 +1,20 @@
+@font-face {
+    font-family: "Megan June";
+    src: url("./assets/fonts/megan-june.woff2") format("woff2"),
+        url("./assets/fonts/megan-june.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Cabin;
+    src: url("./assets/fonts/cabin-regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 $background: red;
+$font: "Megan June", sans-serif;
+$primary: #17cd28;
+$secondary: #933646;
+$tertiary: #dedddd;

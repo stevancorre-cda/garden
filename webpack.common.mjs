@@ -32,6 +32,12 @@ export default {
                     },
                 ],
             },
+            {
+                test: /\.(woff|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
+                use: {
+                  loader: "url-loader",
+                },
+              }
         ],
     },
     plugins: [
