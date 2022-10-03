@@ -4,6 +4,7 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/solid";
 @import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/brands";
 
 @import "styles/theme";
 @import "styles/index";
@@ -11,3 +12,4 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "styles/header";
 @import "styles/hero";
 @import "styles/content";
+@import "styles/footer";

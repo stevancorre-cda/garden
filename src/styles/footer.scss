@@ -1,0 +1,81 @@
+#page-footer {
+    font-family: "Megan June", sans-serif;
+
+    background: #000;
+    color: #fff;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 2rem 3rem;
+
+        .contact {
+            &-name {
+                font-size: 2rem;
+
+                text-transform: uppercase;
+            }
+
+            &-address {
+                font-size: 1.3rem;
+            }
+
+            &-socials {
+                display: flex;
+                gap: 1rem;
+
+                margin-top: 0.75rem;
+
+                li {
+                    color: $primary;
+
+                    font-size: 2rem;
+
+                    cursor: pointer;
+
+                    &:hover {
+                        filter: brightness(110%);
+                    }
+
+                    &:active {
+                        filter: brightness(105%);
+                    }
+                }
+            }
+        }
+
+        .other {
+            text-align: right;
+
+            .go-to-top {
+                color: $primary;
+
+                font-size: 3.5rem;
+
+                &:hover {
+                    filter: brightness(110%);
+                }
+
+                &:active {
+                    filter: brightness(105%);
+                }
+            }
+
+            .copyright {
+                margin-top: 0.75rem;
+
+                font-size: 1.2rem;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
