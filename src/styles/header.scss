@@ -1,0 +1,45 @@
+#page-header {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "Megan June", sans-serif;
+
+    a {
+        text-decoration: none;
+
+        color: #000;
+    }
+
+    .title {
+        font-size: 3.5rem;
+        font-weight: bold;
+
+        border-bottom: 14px solid $secondary;
+    }
+
+    #menu {
+        ul {
+            display: flex;
+            gap: 2rem;
+
+            height: calc(100% - 14px);
+
+            .menu-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                font-size: 2rem;
+                text-transform: uppercase;
+
+                cursor: pointer;
+
+                &.selected,
+                &:hover {
+                    border-bottom: 14px solid $primary;
+                    margin-bottom: -14px;
+                }
+            }
+        }
+    }
+}
