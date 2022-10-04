@@ -46,7 +46,7 @@
 
         margin-top: 2rem;
 
-        width: 70%;
+        max-width: 500px;
         column-count: 2;
 
         font-size: 1.5rem;
@@ -82,8 +82,6 @@
     }
 
     @include mxw-870 {
-        padding: 0 3rem;
-
         &-text {
             display: none;
         }
@@ -95,5 +93,9 @@
 
             line-height: 2.25rem;
         }
+    }
+
+    @include mxw-1200 {
+        padding: 0 3rem;
     }
 }
