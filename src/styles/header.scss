@@ -42,4 +42,8 @@
             }
         }
     }
+
+    @include mxw-1200 {
+        padding: 0 2rem;
+    }
 }

@@ -1,5 +1,11 @@
-@mixin mxw-800 {
-    @media screen and (max-width: 800px) {
+@mixin mxw-870 {
+    @media screen and (max-width: 870px) {
+        @content;
+    }
+}
+
+@mixin mxw-1200 {
+    @media screen and (max-width: 1200px) {
         @content;
     }
 }
