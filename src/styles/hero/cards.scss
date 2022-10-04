@@ -53,3 +53,18 @@
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    #cards {
+        flex-direction: column;
+        gap: 1rem;
+
+        .card {
+            width: 100%;
+
+            &-body {
+                padding: 5% 20%;
+            }
+        }
+    }
+}
