@@ -80,10 +80,8 @@
             filter: brightness(105%);
         }
     }
-}
 
-@media screen and (max-width: 800px) {
-    #presentation {
+    @include mxw-800 {
         padding: 0 3rem;
 
         &-text {
